@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Zip Code"; ObjectID = "JRQ-P0-qkk"; */
+"JRQ-P0-qkk.placeholder" = "Zip Code";
+
+/* Class = "UIBarButtonItem"; title = "text"; ObjectID = "VcK-ra-cwO"; */
+"VcK-ra-cwO.title" = "text";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "gQl-FS-Fnt"; */
+"gQl-FS-Fnt.title" = "Settings";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "iYJ-Tk-bh4"; */
+"iYJ-Tk-bh4.text" = "OR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oNa-CF-Bv7"; */
+"oNa-CF-Bv7.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Current Crime Rate"; ObjectID = "wna-mW-vTB"; */
+"wna-mW-vTB.title" = "Current Crime Rate";

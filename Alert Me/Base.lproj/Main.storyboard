@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,285 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XlC-jz-VVZ" appends="YES" id="v5r-Ps-umU"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="uAE-Za-mSx" kind="presentation" identifier="Linker1" id="4Kf-Aw-pJb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="XlC-jz-VVZ" userLabel="Swipe Gesture Recognizer Left">
+                    <connections>
+                        <segue destination="uAE-Za-mSx" kind="show" id="Y1E-Kz-TZj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-1142.0289855072465" y="-398.4375"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="b5x-6C-CeC">
+            <objects>
+                <viewController id="uAE-Za-mSx" customClass="SecondViewController" customModule="Alert_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pDO-xc-SNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYJ-Tk-bh4">
+                                <rect key="frame" x="195" y="693" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <viewLayoutGuide key="safeArea" id="9AM-uX-e2o"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNa-CF-Bv7">
+                                <rect key="frame" x="87" y="693" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="WnV-XJ-XQ6"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getAreaCrimeRate:" destination="uAE-Za-mSx" eventType="touchUpInside" id="pbK-m6-hSG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-P0-qkk">
+                                <rect key="frame" x="254" y="693" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
+                                <viewLayoutGuide key="safeArea" id="HZS-HY-eir"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="getAreaCrimeRateZip:forEvent:" destination="uAE-Za-mSx" eventType="primaryActionTriggered" id="lAv-xI-3hE"/>
+                                </connections>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-QX-mCs">
+                                <rect key="frame" x="197" y="459" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <viewLayoutGuide key="safeArea" id="Ka8-Lw-Jn0"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR4-Kv-Uwf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Current Crime Rate" id="wna-mW-vTB"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-gE-BbB">
+                                <rect key="frame" x="75" y="158" width="264" height="238"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <viewLayoutGuide key="safeArea" id="8w4-iI-bRV"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="Jxb-3W-dpa"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HLV-BH-32t" appends="YES" id="cvr-rd-xTG"/>
+                            <outletCollection property="gestureRecognizers" destination="oI5-hr-oDX" appends="YES" id="ZqL-Zu-D1g"/>
+                            <outletCollection property="gestureRecognizers" destination="jx6-KY-Ebl" appends="YES" id="Sz3-NI-183"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="displayCrimeRate" destination="6VK-gE-BbB" id="XEO-JR-fN7"/>
+                        <outlet property="fetchingIndicator" destination="0kn-QX-mCs" id="awo-Fi-sHl"/>
+                        <outlet property="getAreaCrimeRateZipText" destination="JRQ-P0-qkk" id="N7b-A2-csG"/>
+                        <outlet property="navigationBar" destination="fR4-Kv-Uwf" id="2S6-RD-DG3"/>
+                        <outlet property="or" destination="iYJ-Tk-bh4" id="fjo-nL-hdR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaK-Uy-VQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="HLV-BH-32t" userLabel="Swipe Gesture Recognizer Left">
+                    <connections>
+                        <segue destination="o9k-mj-nTL" kind="show" id="u6E-hx-Oo7"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="oI5-hr-oDX" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="TuX-bi-lg2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="jx6-KY-Ebl">
+                    <connections>
+                        <action selector="dissmissKeyboard:" destination="uAE-Za-mSx" id="XDb-bo-C09"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-333.33333333333337" y="-398.4375"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="9Cf-9o-ND1">
+            <objects>
+                <viewController title="Settings" id="o9k-mj-nTL" customClass="SettingsViewController" customModule="Alert_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmg-xx-RIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-6T-Oh6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Settings" id="0I4-Hf-I9g"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0R-fx-SgN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuse" textLabel="tpb-30-EWl" style="IBUITableViewCellStyleDefault" id="zl9-T6-1KW" customClass="customSettingsTableCellTableViewCell" customModule="Alert_Me" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zl9-T6-1KW" id="akV-wT-HaL" customClass="customSettingsTableCellTableViewCell" customModule="Alert_Me" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpb-30-EWl">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="tpb-30-EWl" id="LHG-h1-AQe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="delegate" destination="o9k-mj-nTL" id="cq5-Ol-nZZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="cbx-fL-G2f"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VhJ-r1-KEd" appends="YES" id="ooo-cD-czw"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="settingsTable" destination="H0R-fx-SgN" id="MpX-db-W5f"/>
+                        <segue destination="kk7-jr-2R9" kind="show" identifier="segue" id="PZI-5L-spO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCJ-HS-6rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="VhJ-r1-KEd" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <segue destination="uAE-Za-mSx" kind="show" id="lKA-5h-rr0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="466.66666666666669" y="-398.4375"/>
+        </scene>
+        <!--Zip Codes Settings-->
+        <scene sceneID="y1h-4E-dGS">
+            <objects>
+                <viewController id="kk7-jr-2R9" customClass="zipCodesSettings" customModule="Alert_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9pq-a9-Xrn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXZ-sT-Tvc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Zip Codes" id="TL2-db-bBK">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="ZNJ-Zq-Q0T">
+                                            <connections>
+                                                <segue destination="o9k-mj-nTL" kind="show" id="WD9-Wp-lu8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VNw-YZ-g11">
+                                            <connections>
+                                                <action selector="addZipCode:" destination="kk7-jr-2R9" id="sJl-sR-lCD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wqG-ym-mgv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="808" id="bDu-34-Co6"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addedCells" textLabel="wDA-RI-YNO" detailTextLabel="0Xp-G8-bGf" style="IBUITableViewCellStyleValue1" id="YHQ-ft-Hjr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHQ-ft-Hjr" id="ggr-ih-IZ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wDA-RI-YNO">
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Xp-G8-bGf">
+                                                    <rect key="frame" x="335" y="12" width="59" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="trailing" secondItem="NXZ-sT-Tvc" secondAttribute="trailing" id="3Qj-N5-pHv"/>
+                            <constraint firstItem="zom-JR-w3e" firstAttribute="trailing" secondItem="wqG-ym-mgv" secondAttribute="trailing" id="IJu-BH-WZp"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="top" secondItem="NXZ-sT-Tvc" secondAttribute="bottom" id="PUU-zn-Qpt"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="leading" secondItem="zom-JR-w3e" secondAttribute="leading" id="bJH-9n-zla"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="leading" secondItem="NXZ-sT-Tvc" secondAttribute="leading" id="hbg-h3-iWT"/>
+                            <constraint firstAttribute="bottom" secondItem="wqG-ym-mgv" secondAttribute="bottom" id="zbY-bZ-70a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zom-JR-w3e"/>
+                    </view>
+                    <connections>
+                        <outlet property="zipCodesTable" destination="wqG-ym-mgv" id="fJp-xo-UCc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ldx-hQ-aHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="-398.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WD9-Wp-lu8"/>
+        <segue reference="lKA-5h-rr0"/>
+    </inferredMetricsTieBreakers>
 </document>
