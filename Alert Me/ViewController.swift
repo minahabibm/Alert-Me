@@ -10,11 +10,14 @@ import UIKit
 import CoreLocation
 import Foundation
 import UserNotifications
+import CoreData
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
 
     let fCenter = UNUserNotificationCenter.current()
     let locationManager = CLLocationManager()
+    
+    var zipCodesToIgnore: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         locationManager.requestAlwaysAuthorization()
         
         locatationSetup()
+        
         
         // Do any additional setup after loading the view.
     }
@@ -46,12 +50,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations: [CLLocation] ){
         guard let location: CLLocation = manager.location else { return }
+        
         fetchCityAndCountry(from: location) { city, country, postalCode, error in
             guard let city = city, let country = country, let postalCode = postalCode, error == nil else { return }
             print(city + ", " + country + ", " + postalCode )
+            
             let obatainLastZip = UserDefaults.standard.object(forKey: "lastZipObtained")!
+            let zipCodesToBeIgnored = self.getZipArray()
+            
             if(postalCode == obatainLastZip as? String){
                 print("Still in the same zip code")
+            }else if(zipCodesToBeIgnored.contains(postalCode)) {
+                UserDefaults.standard.set(postalCode, forKey: "lastZipObtained")
+                print("zip Code Ignored")
             }else{
                 self.fetchCrimeIndex(zip: postalCode)
                 UserDefaults.standard.set(postalCode, forKey: "lastZipObtained")
@@ -144,6 +155,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         
         //displaying the ios local notification when app is in foreground
         completionHandler([.alert, .badge, .sound])
+    }
+    
+    func getZipArray() -> Array<String>{
+        var zipArrayIgnore: [String] = []
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate!.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ZipCodesToIgnore")
+        do {
+            zipCodesToIgnore = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        
+        for zipCode in zipCodesToIgnore {
+            zipArrayIgnore.append(zipCode.value(forKey: "zipCode") as! String)
+        }
+        return zipArrayIgnore
     }
     
     func notifyMe(x:Int) {

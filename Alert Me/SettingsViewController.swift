@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuse") as! customSettingsTableCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuse")!
         let text = data[indexPath.row]
         cell.textLabel!.text = text
         return cell

@@ -17,24 +17,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>None</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>None</string>
-		</dict>
-	</array>
+	<array/>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Allow "Alert Me" to always access your location?</string>
+	<string>Allow &quot;Alert Me&quot; to always access your location?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow "Alert Me" to access your location while you use the app?</string>
+	<string>Allow &quot;Alert Me&quot; to access your location while you use the app?</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

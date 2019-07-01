@@ -17,7 +17,6 @@ class SecondViewController: ViewController, UITextFieldDelegate {
     @IBAction func dissmissKeyboard(_ sender: Any) {
         getAreaCrimeRateZipText.resignFirstResponder()
     }
-    @IBOutlet weak var or: UILabel!
     @IBOutlet weak var displayCrimeRate: UITextView!
     @IBOutlet weak var getAreaCrimeRateZipText: UITextField!
     @IBAction func getAreaCrimeRateZip(_ sender: Any, forEvent event: UIEvent) {

@@ -45,26 +45,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYJ-Tk-bh4">
-                                <rect key="frame" x="195" y="693" width="24" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <viewLayoutGuide key="safeArea" id="9AM-uX-e2o"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNa-CF-Bv7">
-                                <rect key="frame" x="87" y="693" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNa-CF-Bv7">
+                                <rect key="frame" x="29" y="684" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="2RC-b2-iN9"/>
+                                </constraints>
                                 <viewLayoutGuide key="safeArea" id="WnV-XJ-XQ6"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="getAreaCrimeRate:" destination="uAE-Za-mSx" eventType="touchUpInside" id="pbK-m6-hSG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-P0-qkk">
-                                <rect key="frame" x="254" y="693" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR4-Kv-Uwf">
+                                <rect key="frame" x="0.0" y="44" width="413" height="44"/>
+                                <items>
+                                    <navigationItem title="Current Crime Rate" id="wna-mW-vTB"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-gE-BbB">
+                                <rect key="frame" x="86" y="159" width="241" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6VK-gE-BbB" secondAttribute="height" multiplier="241:284" id="ZRS-GL-9Wz"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="8w4-iI-bRV"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-QX-mCs">
+                                <rect key="frame" x="196.5" y="523" width="20" height="20"/>
+                                <viewLayoutGuide key="safeArea" id="Ka8-Lw-Jn0"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-P0-qkk">
+                                <rect key="frame" x="301" y="684" width="93" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES"/>
                                 </accessibility>
@@ -76,33 +93,25 @@
                                     <action selector="getAreaCrimeRateZip:forEvent:" destination="uAE-Za-mSx" eventType="primaryActionTriggered" id="lAv-xI-3hE"/>
                                 </connections>
                             </textField>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-QX-mCs">
-                                <rect key="frame" x="197" y="459" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <viewLayoutGuide key="safeArea" id="Ka8-Lw-Jn0"/>
-                            </activityIndicatorView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR4-Kv-Uwf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Current Crime Rate" id="wna-mW-vTB"/>
-                                </items>
-                            </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VK-gE-BbB">
-                                <rect key="frame" x="75" y="158" width="264" height="238"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <viewLayoutGuide key="safeArea" id="8w4-iI-bRV"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="oNa-CF-Bv7" firstAttribute="leading" secondItem="Jxb-3W-dpa" secondAttribute="leading" constant="29" id="1o4-ig-SXl"/>
+                            <constraint firstItem="Jxb-3W-dpa" firstAttribute="bottom" secondItem="oNa-CF-Bv7" secondAttribute="bottom" constant="148" id="49j-cJ-8ss"/>
+                            <constraint firstItem="oNa-CF-Bv7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jxb-3W-dpa" secondAttribute="leading" symbolic="YES" id="Akr-YQ-hVp"/>
+                            <constraint firstItem="fR4-Kv-Uwf" firstAttribute="leading" secondItem="pDO-xc-SNZ" secondAttribute="leading" id="ICB-4U-jTg"/>
+                            <constraint firstItem="JRQ-P0-qkk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oNa-CF-Bv7" secondAttribute="trailing" constant="8" symbolic="YES" id="PCN-6j-csw"/>
+                            <constraint firstItem="0kn-QX-mCs" firstAttribute="top" secondItem="6VK-gE-BbB" secondAttribute="bottom" constant="80" id="Rqt-N0-Ker"/>
+                            <constraint firstItem="oNa-CF-Bv7" firstAttribute="top" secondItem="JRQ-P0-qkk" secondAttribute="top" id="TMT-it-M9B"/>
+                            <constraint firstItem="fR4-Kv-Uwf" firstAttribute="centerX" secondItem="6VK-gE-BbB" secondAttribute="centerX" id="Vcu-pq-EoM"/>
+                            <constraint firstItem="Jxb-3W-dpa" firstAttribute="trailing" secondItem="6VK-gE-BbB" secondAttribute="trailing" constant="87" id="aqL-Fa-Pqz"/>
+                            <constraint firstItem="Jxb-3W-dpa" firstAttribute="trailing" secondItem="JRQ-P0-qkk" secondAttribute="trailing" constant="20" id="cMr-mI-dEM"/>
+                            <constraint firstItem="6VK-gE-BbB" firstAttribute="top" secondItem="fR4-Kv-Uwf" secondAttribute="bottom" constant="71" id="gO5-HN-cuo"/>
+                            <constraint firstItem="6VK-gE-BbB" firstAttribute="leading" secondItem="Jxb-3W-dpa" secondAttribute="leading" constant="86" id="mgN-Xo-Z2y"/>
+                            <constraint firstItem="fR4-Kv-Uwf" firstAttribute="centerX" secondItem="0kn-QX-mCs" secondAttribute="centerX" id="oZT-4F-pdW"/>
+                            <constraint firstItem="fR4-Kv-Uwf" firstAttribute="top" secondItem="Jxb-3W-dpa" secondAttribute="top" id="v18-aL-txq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jxb-3W-dpa"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="HLV-BH-32t" appends="YES" id="cvr-rd-xTG"/>
@@ -115,7 +124,6 @@
                         <outlet property="fetchingIndicator" destination="0kn-QX-mCs" id="awo-Fi-sHl"/>
                         <outlet property="getAreaCrimeRateZipText" destination="JRQ-P0-qkk" id="N7b-A2-csG"/>
                         <outlet property="navigationBar" destination="fR4-Kv-Uwf" id="2S6-RD-DG3"/>
-                        <outlet property="or" destination="iYJ-Tk-bh4" id="fjo-nL-hdR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaK-Uy-VQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,35 +161,17 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0R-fx-SgN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="162"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuse" textLabel="tpb-30-EWl" style="IBUITableViewCellStyleDefault" id="zl9-T6-1KW" customClass="customSettingsTableCellTableViewCell" customModule="Alert_Me" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuse" id="ODe-gH-9Tk">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zl9-T6-1KW" id="akV-wT-HaL" customClass="customSettingsTableCellTableViewCell" customModule="Alert_Me" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ODe-gH-9Tk" id="AU8-WH-apw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpb-30-EWl">
-                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
-                                                    </accessibility>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
-                                        </accessibility>
-                                        <connections>
-                                            <outlet property="cellLabel" destination="tpb-30-EWl" id="LHG-h1-AQe"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -221,6 +211,9 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXZ-sT-Tvc">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NXZ-sT-Tvc" secondAttribute="height" multiplier="207:22" id="P7m-ox-Fns"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Zip Codes" id="TL2-db-bBK">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="ZNJ-Zq-Q0T">
@@ -240,7 +233,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="808" id="bDu-34-Co6"/>
+                                    <constraint firstAttribute="width" secondItem="wqG-ym-mgv" secondAttribute="height" multiplier="207:404" id="e9r-va-8BY"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addedCells" textLabel="wDA-RI-YNO" detailTextLabel="0Xp-G8-bGf" style="IBUITableViewCellStyleValue1" id="YHQ-ft-Hjr">
@@ -272,16 +265,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wqG-ym-mgv" firstAttribute="trailing" secondItem="NXZ-sT-Tvc" secondAttribute="trailing" id="3Qj-N5-pHv"/>
-                            <constraint firstItem="zom-JR-w3e" firstAttribute="trailing" secondItem="wqG-ym-mgv" secondAttribute="trailing" id="IJu-BH-WZp"/>
-                            <constraint firstItem="wqG-ym-mgv" firstAttribute="top" secondItem="NXZ-sT-Tvc" secondAttribute="bottom" id="PUU-zn-Qpt"/>
-                            <constraint firstItem="wqG-ym-mgv" firstAttribute="leading" secondItem="zom-JR-w3e" secondAttribute="leading" id="bJH-9n-zla"/>
-                            <constraint firstItem="wqG-ym-mgv" firstAttribute="leading" secondItem="NXZ-sT-Tvc" secondAttribute="leading" id="hbg-h3-iWT"/>
-                            <constraint firstAttribute="bottom" secondItem="wqG-ym-mgv" secondAttribute="bottom" id="zbY-bZ-70a"/>
+                            <constraint firstItem="NXZ-sT-Tvc" firstAttribute="leading" secondItem="zom-JR-w3e" secondAttribute="leading" id="7eV-i1-7Jc"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="top" secondItem="NXZ-sT-Tvc" secondAttribute="bottom" id="D6L-Tk-U9S"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="top" secondItem="NXZ-sT-Tvc" secondAttribute="bottom" id="L26-YW-RU3"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="trailing" secondItem="zom-JR-w3e" secondAttribute="trailing" id="U4p-Kz-GWP"/>
+                            <constraint firstItem="NXZ-sT-Tvc" firstAttribute="top" secondItem="zom-JR-w3e" secondAttribute="top" id="Vai-LR-pnd"/>
+                            <constraint firstItem="NXZ-sT-Tvc" firstAttribute="trailing" secondItem="zom-JR-w3e" secondAttribute="trailing" id="ZhV-PJ-FFA"/>
+                            <constraint firstAttribute="bottom" secondItem="wqG-ym-mgv" secondAttribute="bottom" id="eh1-Gr-ENP"/>
+                            <constraint firstItem="wqG-ym-mgv" firstAttribute="leading" secondItem="zom-JR-w3e" secondAttribute="leading" id="vmV-u9-8YE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zom-JR-w3e"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="VNw-YZ-g11" id="pAD-wl-lpT"/>
+                        <outlet property="doneButton" destination="ZNJ-Zq-Q0T" id="guf-Ma-DiR"/>
+                        <outlet property="zipCodesSettingsCode" destination="TL2-db-bBK" id="czg-m5-F71"/>
                         <outlet property="zipCodesTable" destination="wqG-ym-mgv" id="fJp-xo-UCc"/>
                     </connections>
                 </viewController>
@@ -291,7 +289,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WD9-Wp-lu8"/>
-        <segue reference="lKA-5h-rr0"/>
+        <segue reference="u6E-hx-Oo7"/>
+        <segue reference="Y1E-Kz-TZj"/>
     </inferredMetricsTieBreakers>
 </document>

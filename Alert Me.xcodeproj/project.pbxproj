@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4872635122B6154200D7A1FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872635022B6154200D7A1FA /* SecondViewController.swift */; };
-		489878A122C086AA00DD5A09 /* customSettingsTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489878A022C086AA00DD5A09 /* customSettingsTableCellTableViewCell.swift */; };
 		489878A922C0AEF900DD5A09 /* zipCodesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489878A822C0AEF900DD5A09 /* zipCodesSettings.swift */; };
 		48DD0FF922B1E531009C4D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD0FF822B1E531009C4D6A /* AppDelegate.swift */; };
 		48DD0FFB22B1E531009C4D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD0FFA22B1E531009C4D6A /* ViewController.swift */; };
@@ -17,6 +16,7 @@
 		48DD100322B1E533009C4D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD100122B1E533009C4D6A /* LaunchScreen.storyboard */; };
 		48DD100E22B1E533009C4D6A /* Alert_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD100D22B1E533009C4D6A /* Alert_MeTests.swift */; };
 		48DD101922B1E533009C4D6A /* Alert_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD101822B1E533009C4D6A /* Alert_MeUITests.swift */; };
+		48E19C7F22C366A50088F3B5 /* Alert_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48E19C7D22C366A50088F3B5 /* Alert_Me.xcdatamodeld */; };
 		48F56F1E22BE048E003FBD74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F56F1D22BE048E003FBD74 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		4872635022B6154200D7A1FA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		489878A022C086AA00DD5A09 /* customSettingsTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSettingsTableCellTableViewCell.swift; sourceTree = "<group>"; };
 		489878A822C0AEF900DD5A09 /* zipCodesSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zipCodesSettings.swift; sourceTree = "<group>"; };
 		48DD0FF522B1E531009C4D6A /* Alert Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alert Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD0FF822B1E531009C4D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		48DD101422B1E533009C4D6A /* Alert MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alert MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD101822B1E533009C4D6A /* Alert_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_MeUITests.swift; sourceTree = "<group>"; };
 		48DD101A22B1E533009C4D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E19C7E22C366A50088F3B5 /* Alert_Me.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alert_Me.xcdatamodel; sourceTree = "<group>"; };
 		48F56F1D22BE048E003FBD74 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,12 +109,12 @@
 				48DD0FFA22B1E531009C4D6A /* ViewController.swift */,
 				4872635022B6154200D7A1FA /* SecondViewController.swift */,
 				48F56F1D22BE048E003FBD74 /* SettingsViewController.swift */,
-				489878A022C086AA00DD5A09 /* customSettingsTableCellTableViewCell.swift */,
 				489878A822C0AEF900DD5A09 /* zipCodesSettings.swift */,
 				48DD0FFC22B1E531009C4D6A /* Main.storyboard */,
 				48DD0FFF22B1E533009C4D6A /* Assets.xcassets */,
 				48DD100122B1E533009C4D6A /* LaunchScreen.storyboard */,
 				48DD100422B1E533009C4D6A /* Info.plist */,
+				48E19C7D22C366A50088F3B5 /* Alert_Me.xcdatamodeld */,
 			);
 			path = "Alert Me";
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 				489878A922C0AEF900DD5A09 /* zipCodesSettings.swift in Sources */,
 				48DD0FFB22B1E531009C4D6A /* ViewController.swift in Sources */,
 				48DD0FF922B1E531009C4D6A /* AppDelegate.swift in Sources */,
+				48E19C7F22C366A50088F3B5 /* Alert_Me.xcdatamodeld in Sources */,
 				48F56F1E22BE048E003FBD74 /* SettingsViewController.swift in Sources */,
-				489878A122C086AA00DD5A09 /* customSettingsTableCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +605,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		48E19C7D22C366A50088F3B5 /* Alert_Me.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				48E19C7E22C366A50088F3B5 /* Alert_Me.xcdatamodel */,
+			);
+			currentVersion = 48E19C7E22C366A50088F3B5 /* Alert_Me.xcdatamodel */;
+			path = Alert_Me.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 48DD0FED22B1E531009C4D6A /* Project object */;
 }
