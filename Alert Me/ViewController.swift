@@ -84,8 +84,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "api.gateway.attomdata.com"
-        components.path = "/communityapi/v2.0.0/Area/Full/"
+        components.host = ""
+        components.path = ""
         components.queryItems = [
             URLQueryItem(name: "AreaID", value:  "ZI" + zip)
         ]
@@ -93,8 +93,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UNUserNotific
         
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = [
-            "accept": "application/json",
-            "apikey": "213878bd1b612af66ce4694a4f718d78",
+            "accept": "",
+            "apikey": "",
         ]
         let Session = URLSession(configuration: config)
         
